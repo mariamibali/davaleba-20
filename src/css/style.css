@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.clock-sec {
+  display: flex;
+  justify-content: center;
+}
+.clock-container {
+  background-color: black;
+  width: 200px;
+  height: 100px;
+  padding: 10px;
+  align-content: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.442);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.clock-class,
+.countdown-class {
+  color: rgb(3, 146, 255);
+  font-family: "Orbitron", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+  max-width: auto;
+}
+img {
+  width: 100%;
+}
+.slide img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-text {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  width: calc(100% - 100px);
+}
+.slider-wrapper {
+  position: relative;
+}
+.slider-nav .prev,
+.slider-nav .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s;
+}
+.slider-nav .prev {
+  left: 10px;
+}
+.slider-nav .next {
+  right: 10px;
+}
+.slider-nav .prev:hover,
+.slider-nav .next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.slides {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  transition: transform 0.5s;
+  width: 100%;
+}
+
+.slide {
+  height: 0;
+  position: relative;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.slide.active {
+  opacity: 1;
+  height: 100%;
+}
